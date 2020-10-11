@@ -1,0 +1,18 @@
+{
+  "name": "@1f8/sls-amplify-plugin",
+  "description": "A plugin for the Serverless Framework that outputs AWS Amplify artifacts based on the deployed resources",
+  "main": "./index.js",
+  "version": "1.5.0",
+  "author": "1F8",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "amplify-graphql-docs-generator": "^0.1.29",
+    "aws-appsync-codegen": "^0.17.5",
+    "chalk": "^2.4.1",
+    "json-stable-stringify-pretty": "^1.2.0",
+    "serverless": "^1.32.0"
+  },
+  "peerDependencies": {
+    "serverless": "1.x"
+  }
+}
