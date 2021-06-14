@@ -464,7 +464,7 @@ class ServerlessAmplifyPlugin {
 			`// Written by ${this.useragent} on ${new Date().toISOString()}`,
 			''
 		].join("\n");
-		let config_body = `const AmplifyConfig = ${stringify(config, { pretty: true, space: 4 })};`;
+		let config_body = `const AmplifyConfig = ${stringify(config, { pretty: true, space: 2 })};`;
 		let config_footer = "\nexport default AmplifyConfig;\n"
 		this.writeConfigurationFile(fileDetails.filename, [config_header, config_body, config_footer].join('\n'));
 	}
@@ -482,37 +482,37 @@ class ServerlessAmplifyPlugin {
 			`// Written by ${this.useragent} on ${new Date().toISOString()}`,
 			'',
 			'interface IAWSAmplifyFederatedConfiguration {',
-			'    google_client_id?: string;',
-			'    facebook_app_id?: string;',
-			'    amazon_client_id?: string;',
+			'  google_client_id?: string',
+			'  facebook_app_id?: string',
+			'  amazon_client_id?: string',
 			'}',
 			'',
 			'interface IAWSAmplifyCloudLogicConfiguration {',
-			'    [index: number]: {',
-			'        endpoint: string;',
-			'        name: string;',
-			'        region: string;',
-			'    };',
+			'  [index: number]: {',
+			'    endpoint: string',
+			'    name: string',
+			'    region: string',
+			'  }',
 			'}',
 			'',
 			'interface IAWSAmplifyConfiguration {',
-			'    aws_appsync_authenticationType?: string;',
-			'    aws_appsync_graphqlEndpoint?: string;',
-			'    aws_appsync_region?: string;',
-			'    aws_cognito_identity_pool_id?: string;',
-			'    aws_cognito_region?: string;',
-			'    aws_cloud_logic_custom?: IAWSAmplifyCloudLogicConfiguration;',
-			'    aws_project_region: string;',
-			'    aws_user_files_s3_bucket?: string;',
-			'    aws_user_files_s3_bucket_region?: string;',
-			'    aws_user_pools_id?: string;',
-			'    aws_user_pools_web_client_id?: string;',
-			'    aws_user_pools_web_client_secret?: string;',
-			'    federated?: IAWSAmplifyFederatedConfiguration;',
+			'  aws_appsync_authenticationType?: string',
+			'  aws_appsync_graphqlEndpoint?: string',
+			'  aws_appsync_region?: string',
+			'  aws_cognito_identity_pool_id?: string',
+			'  aws_cognito_region?: string',
+			'  aws_cloud_logic_custom?: IAWSAmplifyCloudLogicConfiguration',
+			'  aws_project_region: string',
+			'  aws_user_files_s3_bucket?: string',
+			'  aws_user_files_s3_bucket_region?: string',
+			'  aws_user_pools_id?: string',
+			'  aws_user_pools_web_client_id?: string',
+			'  aws_user_pools_web_client_secret?: string',
+			'  federated?: IAWSAmplifyFederatedConfiguration',
 			'}',
 			''
 		].join("\n");
-		let config_body = `const AmplifyConfig: IAWSAmplifyConfiguration = ${stringify(config, { pretty: true, space: 4 })};`;
+		let config_body = `const AmplifyConfig: IAWSAmplifyConfiguration = ${stringify(config, { pretty: true, space: 2 })};`;
 		let config_footer = "\nexport default AmplifyConfig;\n"
 		this.writeConfigurationFile(fileDetails.filename, [config_header, config_body, config_footer].join('\n'));
 	}
